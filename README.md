@@ -13,7 +13,9 @@ As previously stated, the project works with the page object model, which means 
 First, the Automation enters the Qubika website and validates the URL and that the logo is visible. Then it clicks on the Contact us form and proceeds validating that it is correctly displayed with the function validateForm, which checks if the Name and Email inputs and submit button are visible.
 After that, it clicks the Submit button to display the error messages because of not filling the mandatory fields. This is done through the validateErrorMessages function, which checks that each one of the five mandatory files have their respective error message.
 Then, it writes a generic name in the Name field to check if the error message has indeed disappeared, which ultimately leads to validate that now the Name field is the only one without an error message, the fastest and simplest way found to do this was by adding a firstNameError parameter to the validateErrorMessages function that, if false, asserted that the first name error message did not exist in the DOM.
-Finally, if used the command `npx cypress run --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=true` to run the automation, a new report in HTML and json formats will be generated in the results folder.
+Finally, if used the command 
+`npx cypress run --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=true,json=true`
+to run the automation, a new report in HTML and json formats will be generated in the results folder.
 
 ### How to run the Automation
 First, this repository has to be cloned and the command `npm install` has to be ran in the repository directory.
